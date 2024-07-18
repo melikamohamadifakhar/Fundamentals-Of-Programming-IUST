@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+    <title>
+        add book
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+    
+<body background="https://i.pinimg.com/736x/02/19/00/021900769d8babe2c98a85084a8f6f01.jpg">
+        <style>
+            input,label{
+                max-width: 350px;
+                margin: auto;
+            }
+        </style>
+            <div dir="rtl" align="right">
+                
+                    <p dir="rtl" align="right" font-size: 100px;>
+                        <center>
+                        <form action="{% url 'form' %}" method="POST">
+                            <label for="book_name" style="font-size:25px">نام کتاب را وارد کنید:</label>
+                    <input type="text" name="inpbook_name" id="book_name" class="form-control" placeholder="مثلا: شب‌های روشن">
+                    <br>
+                    <label for="book_writer" style="font-size:25px">نام نویسنده را وارد کنید:</label>
+                    <input type="text" name="inpbook_writer" id="book_writer" class="form-control" placeholder="مثلا: فیودور داستایفسکی">
+                    <br>
+                    <label for="translator" style="font-size:25px">نام مترجم را وارد کنید:</label>
+                    <input type="text" name="inptranslator" id="translator" class="form-control" placeholder="مثلا: سروش حبیبی">
+                    <br>
+                    <label for="translator" style="font-size:25px">کتاب را معرفی کنید:</label>
+                    <textarea style="width:350px; height: 100px;" type="text" name="inpdescription" id="description" class="form-control" placeholder=" " maxlength="1000"></textarea>
+                    <br>
+                    <button type="submit" onclick="alert('کتاب شما اضافه شد')" style="font-size:20px">تایید</button>
+                </form>
+                </center>
+            </p>
+            </div>
+    </body>
+</html>

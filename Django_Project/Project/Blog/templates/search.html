@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+    <title>
+        search
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body background="https://i.pinimg.com/736x/02/19/00/021900769d8babe2c98a85084a8f6f01.jpg">
+    <style>
+        input,label{
+            max-width: 350px;
+            margin: auto;
+        }
+    </style>
+    <form action="{% url 'search'%}" method="POST">
+        <div dir="rtl" align="right">
+        <div class="form-group">
+                <p dir="rtl" align="right" font-size: 100px;>
+                <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div dir="rtl" align="center">
+                    <label for="book_name1" style="font-size:25px">نام کتاب را وارد کنید:</label>
+                <br>
+                </div>
+                <input type="text" name="book_name1" id="" list="books"  class="form-control" placeholder="مثلا: شب‌های روشن">   
+                    <datalist id="books">
+                        {% for i in result %}
+        <option value="{{i}}">
+            {% endfor %}
+                    </datalist>
+                <br>
+                <br>
+                <button type="submit" style="font-size:20px">تایید</button>
+            </center>
+        </p>
+    </div>
+        </div>
+    </form>
+</body>
+</html>

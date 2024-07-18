@@ -1,0 +1,233 @@
+chords = [(chord :D4, :m), (chord :C4, :major)].ring
+
+live_loop:drum do
+  sample :drum_cymbal_closed, release: 0.5, amp: 0.75
+  sleep 0.5
+end
+
+with_synth :blade do
+  with_fx :reverb do
+    2.times do
+      2.times do
+        play chords[0], release: 0.5, amp:1
+        sleep 0.5
+        play chords[0], release: 0.25, amp:1
+        sleep 0.25
+        play chords[0], release: 0.25
+        sleep 0.25
+      end
+      play chords[1], release: 0.5
+      sleep 0.5
+      play chords[1], release: 0.5
+      sleep 0.5
+      play chords[1], release: 0.5
+      sleep 0.5
+      play chords[1], release: 0.5
+      sleep 0.5
+    end
+  end
+end
+
+2.times do
+  with_synth :piano do
+    with_fx :reverb do
+      2.times do
+        play :A5, release: 0.5
+        play chords[0], release: 2
+        sleep 0.25
+        sample :drum_bass_hard , release: 0.5, amp: 1
+        sleep 0.25
+        play :A5, release: 0.25
+        sleep 0.25
+        play :A5, release: 0.25
+        sleep 0.25
+      end
+      
+      play chords[0], release: 4
+      play :A5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :d5, release: 0.5
+      sleep 0.5
+      play :f5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :A5, release: 0.5
+      sleep 0.5
+      
+      2.times do
+        play :g5, release: 0.5
+        play chords[1], release: 2
+        sleep 0.25
+        sample :drum_bass_hard , release: 0.5, amp: 1
+        sleep 0.25
+        play :g5, release: 0.25
+        sleep 0.25
+        play :g5, release: 0.25
+        sleep 0.25
+      end
+      
+      play chords[1], release: 4
+      play :g5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :c5, release: 0.5
+      sleep 0.5
+      play :e5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :g5, release: 0.5
+      sleep 0.5
+      
+      2.times do
+        play :A5, release: 0.5
+        play chords[0], release: 2
+        sleep 0.25
+        sample :drum_bass_hard , release: 0.5, amp: 1
+        sleep 0.25
+        play :A5, release: 0.25
+        sleep 0.25
+        play :A5, release: 0.25
+        sleep 0.25
+      end
+      
+      play chords[0], release: 4
+      play :A5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :B5, release: 0.5
+      sleep 0.5
+      play :C5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :D5, release: 0.5
+      sleep 0.5
+      
+      play chords[1], release: 4
+      play :C5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :A5, release: 0.5
+      sleep 0.5
+      play :G5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :E5, release: 0.5
+      sleep 0.5
+
+      play chords[0], release: 4
+      play :D5, release: 1
+      sleep 0.5
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.5
+      play :D5, release: 1
+      sleep 0.5
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.5
+      
+      play chords[0], release: 4
+      play :A5, release: 1
+      sleep 0.5
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :A5, release: 0.75
+      sleep 0.75
+      play :A5, release: 0.25
+      sleep 0.5
+      
+      play chords[0], release: 4
+      play :A5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :D5, release: 0.5
+      sleep 0.5
+      play :F5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :A5, release: 0.5
+      sleep 0.5
+      
+      play chords[1], release: 4
+      play :G5, release: 1
+      sleep 0.5
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :G5, release: 0.75
+      sleep 0.75
+      play :G5, release: 0.25
+      sleep 0.5
+      
+      play chords[1], release: 4
+      play :G5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :C5, release: 0.5
+      sleep 0.5
+      play :E5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :G5, release: 0.5
+      sleep 0.5
+      
+      play chords[0], release: 4
+      play :A5, release: 1
+      sleep 0.5
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :A5, release: 0.75
+      sleep 0.75
+      play :A5, release: 0.25
+      sleep 0.5
+      
+      play chords[0], release: 4
+      play :A5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :B5, release: 0.5
+      sleep 0.5
+      play :C5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :D5, release: 0.5
+      sleep 0.5
+      
+      play chords[1], release: 4
+      play :C5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :A5, release: 0.5
+      sleep 0.5
+      play :G5, release: 0.5
+      sleep 0.25
+      sample :drum_bass_hard , release: 0.5, amp: 1
+      sleep 0.25
+      play :E5, release: 0.5
+      sleep 0.5
+      
+      play chords[0], release: 4
+      play :D5, release: 1
+      sleep 0.5
+      sample :drum_bass_hard, release: 0.5, amp: 1
+      sleep 0.5
+      play :D5, release: 1
+      sleep 0.5
+      sample :drum_bass_hard, release: 0.5, amp: 1
+      sleep 0.5
+    end
+  end
+end
